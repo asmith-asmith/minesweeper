@@ -1,0 +1,17 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(6, 10vmin);
+    grid-template-rows: repeat(6, 10vmin);
+}
+
+#board div {
+    border: 1px solid black;
+}

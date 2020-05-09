@@ -1,0 +1,45 @@
+1. Define constants:
+    lookup for -1 = bomb maybe an imgUrl
+
+2. define apps state variables - these change
+    the board
+    random indexdes to fill board
+    status: alive(null) or dead
+
+3. cache DOM elements that ill need to access
+    divs representing the board
+    reset button
+    time element
+
+4. add event listeners
+    for click on board
+    for click on reset
+
+5. invoke init
+    initialize board with all nulls 6x6 array
+    get 12 random indexed 0-5
+    fill board with -1 at random indexdes for(x,j meet in middle)
+    ?initialize the rest of the eleemnt with number of -1 touching? recursion????
+    render()
+
+6. render()
+    render board 
+        will cover every div in grey
+    render message
+        pick a spot?
+        if(status)
+            u dead
+        else
+            careful
+
+7. wait for click
+    get click index
+    update state variables
+    check index 
+
+    if index is -1 status = dead return render message
+    else fade box
+
+
+8. if reset click
+    call 
