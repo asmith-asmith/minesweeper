@@ -4,12 +4,12 @@
 
 body {
     font-family: 'Audiowide', cursive;
-    background-color: rgba(22,26,32);
+    background-color: white; /*rgba(22,26,32) */
     color: rgb(14, 16, 20);
 }
 
 .wrapper{
-    background-color:rgba(38,34,40);
+    background-color:white; /*rgba(38,34,40)*/
     /* background-image: url("paper.gif"); */
     /* border: 4px solid black; */
     margin: 10px auto;
@@ -70,7 +70,7 @@ section {
     grid-template-rows: repeat(9, 40px); /*10vmin*/
 }
 #board div {
-    border: 1px solid rgba(22,26,32);
+    border: 1px solid black;  /*rgba(22,26,32)*/
     text-align: center;
     display: inline-block;
 }
