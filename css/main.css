@@ -4,17 +4,18 @@
 
 body {
     font-family: 'Audiowide', cursive;
-    background-color: white; /*rgba(22,26,32) */
+    background-color: grey; /* white rgba(227,60,8)*/
     color: rgb(14, 16, 20);
 }
 
 .wrapper{
-    background-color:white; /*rgba(38,34,40)*/
-    /* background-image: url("paper.gif"); */
+    background-color:black; /*white rgba(38,34,40)*/
+    background : url("https://i.imgur.com/RvY9ut6.jpg"); /*https://www.markrothko.org/wp-content/uploads/2014/07/Rothko-Mural-1024x945.jpg*/
+    background-size: 100% 100%;
     /* border: 4px solid black; */
     margin: 10px auto;
-    width: 1200px;
-    height: 700px;
+    width: 1200px; /*1200px 90%*/
+    height: 700px; /*700px 90%*/
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 1fr 2fr 1fr;
@@ -36,6 +37,9 @@ body {
     align-items: center;
     flex: wrap;
 }
+h1{
+    color: dark-grey;
+}
 #timer{
   grid-area: "timer";
   grid-column-start: 1;
@@ -46,9 +50,18 @@ body {
 
 }
 #reset{
-    grid-area: "reset";
     grid-column-start: 2;
     grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#player{
+    grid-column-start: 1;
+    grid-column-end: 2;
     grid-row-start: 3;
     grid-row-end: 4;
     justify-self: center;
@@ -70,13 +83,13 @@ section {
     grid-template-rows: repeat(9, 40px); /*10vmin*/
 }
 #board div {
-    border: 1px solid black;  /*rgba(22,26,32)*/
+    border: 1px solid rgba(22,26,32);  /*black*/
     text-align: center;
     display: inline-block;
 }
 #reset-button{
     height: 34px;
     padding: 5px;
-    background-color: rgb(49, 29, 35);
-    border: 1px solid rgba(22,26,32);
+    background-color:grey; /*rgb(49, 29, 35); rgba(227,60,8)*/
+    border: 1px solid black; /* rgba(22,26,32); rgba(227,60,8)*/
 }

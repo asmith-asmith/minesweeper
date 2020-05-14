@@ -2,17 +2,17 @@
 let lookup = {
     clicked: {
         '-1': "*",
-        0: 'white', //rgba(22,26,32)
+        0: 'white', //white rgba(22,26,32)
     },
-    unclicked: 'grey' //rgba(49,29,35)
+    unclicked: 'grey' //grey rgba(49,29,35)
 };
 /*----- app's state (variables) -----*/
 let board;
 let boardStatus;
-let randomIdx = [];
 let status;
 let g = 0;
 var myVar;
+
 /*----- cached element references -----*/
 const markerEls = Array.from(document.querySelectorAll('#board> div'));
 
@@ -24,13 +24,9 @@ const timerEl = document.getElementById('timer');
 // document.getElementById('board').addEventListener('contextmenu', placeFlag);
 document.getElementById('reset').addEventListener('click', init);
 /*----- functions -----*/
-// oficially first click cant be a bomb
-//On first click init or before?
-
 init();
 
 function init(){
-    board = [];
     board = [
         [0,0,0,0,0,0,0,0,0],
         [0,0,0,0,0,0,0,0,0],
@@ -42,6 +38,7 @@ function init(){
         [0,0,0,0,0,0,0,0,0],
         [0,0,0,0,0,0,0,0,0]
     ];
+    console.log(board)
     boardStatus = [
         [false,false,false,false,false,false,false,false,false],
         [false,false,false,false,false,false,false,false,false],
@@ -58,6 +55,7 @@ function init(){
     document.getElementById('board').addEventListener('contextmenu', placeFlag);
     g = 0;
     
+    let randomIdx = [];
     // Getting my mines
     // First get 10 sets of random __ indices
     for(let i = 0; i < 10; i++) {
@@ -148,7 +146,7 @@ function playGame(evt){
 
 function checkWin(chosen){
     if(isAllClicked()){
-        msgEl.innerHTML = "YOU SURVIVED FOR NOW";
+        msgEl.innerHTML = "YOU SURVIVED -- FOR NOW";
         document.getElementById('board').removeEventListener('click', playGame);
         document.getElementById('board').removeEventListener('contextmenu', placeFlag);
         myStopFunction();
@@ -233,9 +231,12 @@ function boundsCheck(eightArray){
 function placeFlag(evt){
     let cell = evt.target.id;
     let div = document.getElementById(cell)
-    div.style.background = "repeating-linear-gradient(45deg, rgba(22,26,32), rgba(22,26,32) 10px, rgba(38,34,40) 10px, rgba(38,34,40) 20px)";
+    if(div.style.background === 'grey'){
+        div.style.background = "repeating-linear-gradient(45deg, grey, grey 10px, white 10px, white 20px)";
+    } else {
+        div.style.background = 'grey'
+    }
 }
-
 
 function myTimer() {
     document.getElementById("clock").innerHTML = g;
