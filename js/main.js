@@ -120,6 +120,9 @@ function renderBoard(){
             let div = document.getElementById(`c${colIdx}r${rowIdx}`)
             div.style.backgroundColor = lookup.unclicked;
             div.innerHTML = ""
+            if(div.style.backgroundColor !== 'grey'){
+                placeFlag(div);
+            }
         });
     });
 }

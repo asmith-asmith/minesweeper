@@ -25,7 +25,6 @@ body {
 }
 
 #header{
-    grid-area: "header";
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
@@ -38,10 +37,9 @@ body {
     flex: wrap;
 }
 h1{
-    color: dark-grey;
+    text-shadow: 2px 2px grey;
 }
 #timer{
-  grid-area: "timer";
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 2;
@@ -61,20 +59,18 @@ h1{
 }
 #player{
     grid-column-start: 1;
-    grid-column-end: 2;
+    grid-column-end: 3;
     grid-row-start: 3;
     grid-row-end: 4;
-    justify-self: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* justify-self: center; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr
 }
 section {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 3;
-    grid-area: "board";
     justify-self: center;
 }
 #board {
