@@ -8,9 +8,9 @@ Right click to flag a cell you believe holds a mine.
 ## Game Images
 
 ScreenShots
-![Playing Screenshot](./images/screenshot1.jpeg)
-![Lose Screenshot](./images/screenshot2.jpeg)
-![Win Screenshot](./images/screenshot3.jpeg)
+![Playing Screenshot](./imgs/img1-start.jpeg)
+![Lose Screenshot](./imgs/img2-play.jpeg)
+![Win Screenshot](./imgs/img3-win.jpeg)
 
 ## Play
 
@@ -24,6 +24,7 @@ Click [here](https://asmith-asmith.github.io/minesweeper/)
 
 ## MVC
 
+* Uses
 
 ## To Add
 
@@ -31,4 +32,4 @@ Click [here](https://asmith-asmith.github.io/minesweeper/)
 
 ## Next Version
 
-* 
+* Class Oriented Approach
