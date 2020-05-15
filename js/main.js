@@ -2,9 +2,9 @@
 let lookup = {
     clicked: {
         '-1': "*",
-        0: 'white', //white rgba(22,26,32)
+        0: 'white', 
     },
-    unclicked: 'grey' //grey rgba(49,29,35)
+    unclicked: 'grey'
 };
 /*----- app's state (variables) -----*/
 let board;
@@ -20,8 +20,6 @@ const msgEl = document.getElementById('msg');
 
 const timerEl = document.getElementById('timer');
 /*----- event listeners -----*/
-// document.getElementById('board').addEventListener('click', playGame);
-// document.getElementById('board').addEventListener('contextmenu', placeFlag);
 document.getElementById('reset').addEventListener('click', init);
 /*----- functions -----*/
 
