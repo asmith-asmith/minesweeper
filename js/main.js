@@ -24,6 +24,7 @@ const timerEl = document.getElementById('timer');
 // document.getElementById('board').addEventListener('contextmenu', placeFlag);
 document.getElementById('reset').addEventListener('click', init);
 /*----- functions -----*/
+
 init();
 
 function init(){
@@ -74,6 +75,7 @@ function init(){
     status = true;
     render();
 };
+
 // This function updates the indices surrounding the bombs with the number of bombs it is touching
 // It does this by upadating the 0 + 1 for each bomb it touchess
 function checkEight(i,j){
@@ -91,7 +93,6 @@ function checkEight(i,j){
         }
     });
 };
-
 
 // This function serves to create an array of 8 indices surrounding a cell
 // It includes out of bounds indices
@@ -121,12 +122,11 @@ function renderBoard(){
             div.style.backgroundColor = lookup.unclicked;
             div.innerHTML = ""
             if(div.style.backgroundColor !== 'grey'){
-                placeFlag(div);
+                div.style.backgroundColor = 'grey';
             }
         });
     });
-}
-
+};
 
 // click event listner
 function playGame(evt){

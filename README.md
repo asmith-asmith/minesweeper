@@ -8,9 +8,11 @@ Right click to flag a cell you believe holds a mine.
 ## Game Images
 
 ScreenShots
-![Playing Screenshot](./imgs/img1-start.jpeg)
-![Lose Screenshot](./imgs/img2-play.jpeg)
-![Win Screenshot](./imgs/img3-win.jpeg)
+![Start Screenshot](./imgs/img1-start.png)
+![Play Screenshot](./imgs/img2-play.png)
+![Win Screenshot](./imgs/img3-win.png)
+![LoseScreenshot](./imgs/img4-lose.png)
+
 
 ## Play
 
